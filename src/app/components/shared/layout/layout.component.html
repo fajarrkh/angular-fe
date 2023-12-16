@@ -1,6 +1,47 @@
-<div>
-    <mat-toolbar>
-        
-    </mat-toolbar>
-    <router-outlet></router-outlet>
+<div class="navbar-container" [class.example-is-mobile]="mobileQuery.matches">
+  
+  <mat-toolbar class="navbar navbar mat-elevation-z6" color="primary">
+    
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <a class="navbar-brand" [routerLink]="['/']">
+      <h1>Report System</h1>
+    </a>
+
+    <span class="navbar-spacer"></span>
+
+    <button mat-button [matMenuTriggerFor]="userMenu">
+      <mat-icon>person</mat-icon>
+      <span fxShow fxHide.xs> UserName </span>
+    </button>
+    <mat-menu #userMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false">
+      <a mat-menu-item [routerLink]="['/account/profile']">
+        <mat-icon>person</mat-icon>
+        <span>Account</span>
+      </a>
+
+      <a mat-menu-item [routerLink]="['/auth/login']">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Log out</span>
+      </a>
+    </mat-menu>
+
+  </mat-toolbar>
+
+  <mat-sidenav-container class="navbar-sidenav-container">
+    <mat-sidenav #snav [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" class="sidenav">
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
+          <p mat-line>Dashboard</p>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="sidenav-content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
 </div>
