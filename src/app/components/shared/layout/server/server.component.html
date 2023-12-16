@@ -1,0 +1,14 @@
+<button mat-button [matMenuTriggerFor]="serverMenu">
+  <mat-icon>arrow_drop_down</mat-icon>
+  <span fxShow fxHide.xs>
+    Server
+  </span>
+</button>
+
+<mat-menu #serverMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false">
+  <button mat-menu-item>
+    <span fxShow fxHide.xs>
+      Server
+    </span>
+  </button>
+</mat-menu>
