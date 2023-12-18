@@ -5,7 +5,7 @@
       <mat-icon>menu</mat-icon>
     </button>
 
-    <a class="navbar-brand" [routerLink]="['/']">
+    <a class="navbar-brand">
       <h1>Report System</h1>
     </a>
 
@@ -17,12 +17,12 @@
       <span fxShow fxHide.xs> UserName </span>
     </button>
     <mat-menu #userMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false">
-      <a mat-menu-item [routerLink]="['/account/profile']">
+      <a mat-menu-item>
         <mat-icon>person</mat-icon>
         <span>Account</span>
       </a>
 
-      <a mat-menu-item [routerLink]="['/auth/login']">
+      <a mat-menu-item>
         <mat-icon>exit_to_app</mat-icon>
         <span>Log out</span>
       </a>
@@ -41,7 +41,7 @@
           <a mat-list-item>
             <p mat-line>Landing Page</p>
           </a>
-          <a mat-list-item>
+          <a mat-list-item [routerLink]="['/not-found']" routerLinkActive="active">
             <p mat-line>Not Found</p>
           </a>
         </mat-expansion-panel>

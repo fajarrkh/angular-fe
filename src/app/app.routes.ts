@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
     {
-      path: 'dashboard',
-      loadChildren: () => import('./components/system/dashboard/dashboard.module').then(m => m.DashboardModule)
+      path: '',
+      loadChildren: () => import('@app/system/dashboard/dashboard.module').then(m => m.DashboardModule)
     },
     {
       path: '**',
-      redirectTo: 'dashboard',
+      redirectTo: 'not-found',
       pathMatch: 'full'
     }
 ];
