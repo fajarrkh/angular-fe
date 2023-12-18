@@ -9,12 +9,20 @@ import { ServerComponent } from './shared/layout/server/server.component';
 @NgModule({
     imports: [
         RouterModule,
-        MaterialModule
+        MaterialModule,
+        FormsModule,
+        ReactiveFormsModule,
+        FlexLayoutModule
     ],
     declarations: [
         LayoutComponent,
         ServerComponent
     ],
-    exports: []
+    exports: [
+        FormsModule,
+        ReactiveFormsModule,
+        FlexLayoutModule,
+        MaterialModule
+    ]
 })
 export class SharedModule { }
