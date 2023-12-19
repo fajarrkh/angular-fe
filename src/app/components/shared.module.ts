@@ -5,6 +5,7 @@ import { MaterialModule } from './shared/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServerComponent } from './shared/layout/server/server.component';
+import { UserProfileComponent } from './system/dashboard/user-profile/user-profile.component';
 
 @NgModule({
     imports: [
@@ -16,7 +17,8 @@ import { ServerComponent } from './shared/layout/server/server.component';
     ],
     declarations: [
         LayoutComponent,
-        ServerComponent
+        ServerComponent,
+        UserProfileComponent
     ],
     exports: [
         FormsModule,
