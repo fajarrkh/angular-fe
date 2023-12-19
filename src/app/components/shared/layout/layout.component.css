@@ -42,10 +42,10 @@
 /*Set sidenav width*/
 
 mat-sidenav {
-  min-width: 18% !important;
-  border-right: 1px solid #eee;
+  min-width: 15% !important;
+  /* border-right: 1px solid #eee;
   box-shadow: 6px 0 6px rgba(0, 0, 0, .1);
-  /* background-color:rgb(63, 81, 181); */
+  background-color:rgb(63, 81, 181); */
 }
 
 /* Set height of wrapper to stop content from moving up & down */

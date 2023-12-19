@@ -39,10 +39,10 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <a mat-list-item>
-            <p mat-line>Landing Page</p>
+            <p mat-line [routerLink]="['/dashboard']" routerLinkActive="active">Landing Page</p>
           </a>
-          <a mat-list-item [routerLink]="['/not-found']" routerLinkActive="active">
-            <p mat-line>Not Found</p>
+          <a mat-list-item>
+            <p mat-line [routerLink]="['/not-found']" routerLinkActive="active">Not Found</p>
           </a>
         </mat-expansion-panel>
       </mat-nav-list>
