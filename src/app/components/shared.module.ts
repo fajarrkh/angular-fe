@@ -6,6 +6,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServerComponent } from './shared/layout/server/server.component';
 import { UserProfileComponent } from './system/dashboard/user-profile/user-profile.component';
+import { UserComponent } from './shared/layout/user/user.component';
+import { MenuBarComponent } from './shared/layout/menu-bar/menu-bar.component';
 
 @NgModule({
     imports: [
@@ -18,6 +20,8 @@ import { UserProfileComponent } from './system/dashboard/user-profile/user-profi
     declarations: [
         LayoutComponent,
         ServerComponent,
+        UserComponent,
+        MenuBarComponent,
         UserProfileComponent
     ],
     exports: [

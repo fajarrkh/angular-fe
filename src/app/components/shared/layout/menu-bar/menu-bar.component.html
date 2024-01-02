@@ -1,0 +1,15 @@
+<mat-nav-list>
+  <mat-expansion-panel >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Dashboard
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <a mat-list-item>
+      <p mat-line [routerLink]="['/dashboard']" routerLinkActive="active">Landing Page</p>
+    </a>
+    <a mat-list-item>
+      <p mat-line [routerLink]="['/not-found']" routerLinkActive="active">Not Found</p>
+    </a>
+  </mat-expansion-panel>
+</mat-nav-list>

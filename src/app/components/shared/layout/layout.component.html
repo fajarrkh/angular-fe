@@ -11,41 +11,12 @@
 
     <span class="navbar-spacer"></span>
     <app-server></app-server>
-
-    <button mat-button [matMenuTriggerFor]="userMenu">
-      <mat-icon>person</mat-icon>
-      <span fxShow fxHide.xs> UserName </span>
-    </button>
-    <mat-menu #userMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false">
-      <a mat-menu-item>
-        <mat-icon>person</mat-icon>
-        <span>Account</span>
-      </a>
-
-      <a mat-menu-item>
-        <mat-icon>exit_to_app</mat-icon>
-        <span>Log out</span>
-      </a>
-    </mat-menu>
+    <app-user></app-user>
 
   </mat-toolbar>
   <mat-sidenav-container class="navbar-sidenav-container">
     <mat-sidenav #snav [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" class="sidenav">
-      <mat-nav-list>
-        <mat-expansion-panel >
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Dashboard
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <a mat-list-item>
-            <p mat-line [routerLink]="['/dashboard']" routerLinkActive="active">Landing Page</p>
-          </a>
-          <a mat-list-item>
-            <p mat-line [routerLink]="['/not-found']" routerLinkActive="active">Not Found</p>
-          </a>
-        </mat-expansion-panel>
-      </mat-nav-list>
+      <app-menu-bar></app-menu-bar>
     </mat-sidenav>
 
     <mat-sidenav-content class="sidenav-content">

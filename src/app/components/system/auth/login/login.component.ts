@@ -32,6 +32,11 @@ private createForm() {
 
   login() {
     this.loading = true;
+    
+    setTimeout(() => {
+      this.loading = false;
+      this.router.navigate(['/dashboard']);
+    }, 1250);
   }
 
   resetPassword() {
