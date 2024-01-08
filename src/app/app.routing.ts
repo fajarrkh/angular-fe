@@ -7,8 +7,12 @@ const appRoutes: Routes = [
       loadChildren: () => import('@app/system/dashboard/dashboard.module').then(m => m.DashboardModule)
     },
     {
-      path: 'auth',
+      path: '',
       loadChildren: () => import('@app/system/auth/auth.module').then(m => m.AuthModule)
+    },
+    {
+      path: '',
+      loadChildren: () => import('@app/system/account/account.module').then(m => m.AccountModule),
     },
     {
       path: '**',

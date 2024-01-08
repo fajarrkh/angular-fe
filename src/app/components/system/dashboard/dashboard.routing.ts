@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './landing-page/dashboard.component';
 import { LayoutComponent } from '@app/shared/layout/layout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   {
@@ -11,8 +10,7 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: '', component: DashboardComponent },
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'profile', component: UserProfileComponent }
+      { path: 'dashboard', component: DashboardComponent }
     ]
   },
   { path: 'not-found', component: NotFoundComponent }

@@ -5,9 +5,9 @@ import { MaterialModule } from './shared/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServerComponent } from './shared/layout/server/server.component';
-import { UserProfileComponent } from './system/dashboard/user-profile/user-profile.component';
 import { UserComponent } from './shared/layout/user/user.component';
 import { MenuBarComponent } from './shared/layout/menu-bar/menu-bar.component';
+import { TaskComponent } from './shared/layout/task/task.component';
 
 @NgModule({
     imports: [
@@ -22,7 +22,7 @@ import { MenuBarComponent } from './shared/layout/menu-bar/menu-bar.component';
         ServerComponent,
         UserComponent,
         MenuBarComponent,
-        UserProfileComponent
+        TaskComponent
     ],
     exports: [
         FormsModule,

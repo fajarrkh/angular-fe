@@ -3,12 +3,12 @@
   <span fxShow fxHide.xs> UserName </span>
 </button>
 <mat-menu #userMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false">
-  <a mat-menu-item>
+  <a mat-menu-item [routerLink]="['/profile']" routerLinkActive="active">
     <mat-icon>person</mat-icon>
     <span>Account</span>
   </a>
 
-  <a mat-menu-item [routerLink]="['/auth/login']" routerLinkActive="active">
+  <a mat-menu-item [routerLink]="['/login']" routerLinkActive="active">
     <mat-icon>exit_to_app</mat-icon>
     <span>Log out</span>
   </a>

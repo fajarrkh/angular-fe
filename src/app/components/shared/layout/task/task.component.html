@@ -1,0 +1,13 @@
+<button mat-icon-button [matMenuTriggerFor]="notificationMenu">
+  <mat-icon matBadge="2" matBadgeColor="accent">apps</mat-icon>
+</button>
+<mat-menu #notificationMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false">
+
+  <a mat-menu-item>
+    <span>Report Check Stock</span>
+  </a>
+  <a mat-menu-item>
+    <span>Report Bentor Incentive</span>
+  </a>
+
+</mat-menu>
